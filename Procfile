@@ -1,1 +1,1 @@
-web: streamlit run --server.enableCORS false --server.port $PORT iris_app.py
+web: sh setup.py && streamlit run iris_app.py
