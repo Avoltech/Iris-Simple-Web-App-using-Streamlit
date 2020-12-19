@@ -1,4 +1,4 @@
-streamlit
-pickle
-PIL
-sklearn
+streamlit==0.72.0
+pickleshare==0.7.5
+Pillow==6.2.1
+scikit-learn==0.21.2
