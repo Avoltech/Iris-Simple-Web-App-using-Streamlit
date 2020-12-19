@@ -1,5 +1,4 @@
 import streamlit as st
-import numpy as np
 import pickle
 import PIL
 
@@ -33,11 +32,8 @@ def main():
 	with open('model/rfc_model.pkl', 'rb') as file:
 		pickle_model = pickle.load(file)
 
-	flower_details = np.array([[sl, sw, pl, pw]])
-	prediction =pickle_model.predict(flower_details)
-
 	if st.button("CLASSIFY"):
-		flower_details = np.array([[sl, sw, pl, pw]])
+		flower_details = [[sl, sw, pl, pw]]
 		prediction =pickle_model.predict(flower_details)
 		st.subheader("Prediction:")
 		st.success(FLOWER_CAT[prediction[0]])
